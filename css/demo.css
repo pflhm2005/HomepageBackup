@@ -1,0 +1,45 @@
+#content {
+  margin: 150px 0;
+  position: relative;
+  text-align: center;
+}
+#content > .bg {
+  vertical-align: middle;
+  opacity: .8;
+  position: relative;
+  z-index: -1;
+}
+#content > .detail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  opacity: 0;
+}
+#content > .detail.on {
+  opacity: 1;
+}
+#content > .detail > img {
+  float: left;
+}
+#content > .link {
+  left: 25%;
+  top: 40%;
+  position: absolute;
+  font-size: 0;
+  transition: all .5s;
+}
+#content > .link > a {
+  transition: all .5s;
+  font-size: 16px;
+  padding: 15px 30px;
+  background-color: #ff9900;
+  margin: 0 10px;
+  opacity: .5;
+}
+#content > .link > a.on {
+  padding: 30px 60px;
+  opacity: 1;
+}

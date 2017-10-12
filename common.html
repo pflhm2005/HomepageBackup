@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy's blog</title>
+    <link rel="stylesheet" href="css/common.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <!--<script src="lib/js/less.min.js"></script>-->
+</head>
+
+<body>
+    <ul id="tip">
+        <template v-for="(item,index) in tips">
+            <li :class="{on:iter_tip===index}"
+                    class="tip-list"
+                    @mouseenter="iter_tip=index"
+                    @mouseleave="iter_tip=null">
+                <a :class="item.href">
+                    <p>{{item.str}}</p>
+                    <img :src="item.src">
+                </a>
+            </li>
+        </template>
+    </ul>
+    <!--头部导航栏-->
+    <header id="header">
+        <div class="container">
+            <!--自定义一个logo-->
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <span class="logo-lg">J</span><span class="logo-sm">immy's </span>
+                        <span class="logo-lg">H</span><span class="logo-sm">omePage</span>
+                        <p>我不管 我就要跟妹子坐一起</p>
+                    </a>
+                </h1>
+            </div>
+            <!--包含各个页面的导航-->
+            <ul class="nav">
+                <template v-for="(item,index) in nav">
+                    <li :class="{on:0===index||iter_nav===index}"
+                        @mouseenter="iter_nav=index"
+                        @mouseleave="iter_nav=null">
+                        <a :href="item.href">{{item.name}}</a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </header>
+
+
+    <!--------------------------------------------------以上为头部------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------------以上为底部------------------------------------------------>
+
+
+    <footer class="clearfix " id="footer">
+        <div class="f-top ">
+            <div class="container ">
+                <template v-for="items in foot">
+                    <ul>
+                        <li><h4>{{items.title}}</h4></li>
+                        <template v-for="item in items.contents">
+                            <li>
+                                <a :href="item.href">{{item.content}}</a>
+                            </li>
+                        </template>
+                </ul>
+                </template>
+            </div>
+        </div>
+        <div class="f-bottom ">
+            <div class="container ">
+                <p class="ft-word ">© 2017 Jimmy. All rights reserved | Design by me~ </p>
+                <p class="ft-icon "></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="lib/js/vue.min.js "></script>
+<script src="lib/js/vue-router.min.js "></script>
+<script src="js/common.js"></script>
+<script src="js/note.js "></script>
+
+</html>

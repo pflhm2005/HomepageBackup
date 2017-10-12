@@ -1,0 +1,223 @@
+.title > h2 {
+  font-size: 36px;
+  color: #222;
+  font-weight: normal;
+  padding-left: 20px;
+  border-left: 5px solid #ff9900;
+}
+.title > .title-sm {
+  padding: 15px;
+  color: #999;
+  font-size: 14px;
+}
+.title > .title-sm > p {
+  padding: 3px;
+}
+#banner {
+  background-color: white;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  border-top: 1px solid transparent;
+}
+#banner .banner-about {
+  width: 25%;
+  float: left;
+  text-align: left;
+  margin: 60px 0 60px -1px;
+  padding: 40px 0;
+  border-top: 1px dashed #000;
+  border-bottom: 1px dashed #000;
+}
+#banner .banner-about > li {
+  text-indent: 10px;
+  padding: 18px 0 ;
+  font-size: 16px;
+  font-weight: bold;
+}
+#banner .banner-about > li > span {
+  font-size: 13px;
+  font-weight: normal;
+}
+#banner .banner-about > li > span::before {
+  content: " ";
+}
+#banner .banner-about > li + li {
+  padding-left: 8px;
+}
+#banner .banner-about > .head-img {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: url("../images/head_pic.jpg") 0 30% no-repeat;
+  background-size: cover;
+  border-radius: 25px;
+}
+#banner .banner-weather {
+  margin: 60px 0 60px -1px;
+  padding: 40px 20px;
+  border-top: 1px dashed #000;
+  border-bottom: 1px dashed #000;
+  width: 25%;
+  float: right;
+}
+#banner .banner-weather > li {
+  padding: 10px 0 ;
+}
+#banner .banner-weather > li > p {
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 0;
+  font-size: 16px;
+}
+#banner .banner-weather > li > span {
+  font-size: 14px;
+  text-indent: 10px;
+}
+#banner > .container {
+  position: absolute;
+  content: "";
+  width: 50%;
+  left: 25%;
+  top: 0;
+  background: url("../images/index.jpg") 0 80% no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+#banner > .container > .banner-info {
+  width: 100%;
+  margin-top: 150px;
+}
+#banner > .container > .banner-info > .banner-content {
+  text-align: center;
+  font-weight: bold;
+}
+#banner > .container > .banner-info > .banner-content > li > h1 {
+  color: white;
+  text-shadow: 8px 8px #ff9900;
+  font-size: 50px;
+}
+#banner > .container > .banner-info > .banner-content > li > p {
+  margin: 20px 0 ;
+  font-size: 20px;
+  color: #ff9900;
+}
+#banner > .container > .banner-info > .banner-content > li > a {
+  display: inline-block;
+  color: white;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #ff9900;
+}
+#work {
+  padding-top: 50px;
+}
+#work > .container > .wel-content {
+  width: 100%;
+}
+#work > .container > .wel-content > ul {
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 2px;
+  width: 100%;
+}
+#work > .container > .wel-content > ul > li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 0 20px;
+  transition: all 1s;
+  margin-bottom: 100px;
+}
+#work > .container > .wel-content > ul > li:hover {
+  transform: rotateY(360deg);
+}
+#work > .container > .wel-content > ul > li > .wel-list {
+  transition: all 2s;
+  opacity: 0;
+  border: 1px solid transparent;
+  position: relative;
+  height: 250px;
+  border-radius: 170px;
+  box-shadow: 0px 0px 5px #999;
+}
+#work > .container > .wel-content > ul > li > .wel-list > .icon {
+  position: absolute;
+  top: -13%;
+  left: 37%;
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #146eb4;
+}
+#work > .container > .wel-content > ul > li > .wel-list > .icon > img {
+  width: 100%;
+  height: 100%;
+}
+#work > .container > .wel-content > ul > li > .wel-list > h4 {
+  color: #ff9900;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+#work > .container > .wel-content > ul > li > .wel-list > p {
+  color: #999;
+  font-size: 14px;
+  line-height: 25px;
+  width: 200px;
+  margin: 0 auto;
+}
+#skill {
+  background-color: white;
+  padding: 50px 0 ;
+}
+#skill > .container > .skill-tree {
+  margin: 50px 20px;
+  padding: 0 30px 10px 30px;
+  border-left: 1px dashed #000;
+  border-right: 1px dashed #000;
+  transition: all 1s;
+}
+#skill > .container > .skill-tree > li {
+  position: relative;
+  height: 30px;
+  padding-left: 50px;
+  margin: 30px 0 ;
+  line-height: 30px;
+}
+#skill > .container > .skill-tree > li > .name {
+  line-height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  padding-left: 20px;
+}
+#skill > .container > .skill-tree > li > .progress {
+  transition: all 2s;
+  position: relative;
+  margin: 0 60px;
+  padding-top: 5px;
+  display: inline-block;
+  height: 70%;
+  border-radius: 15px;
+  font-size: 0;
+  width: 0;
+}
+#skill > .container > .skill-tree > li > .progress > .percentage {
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  line-height: 20px;
+  border-radius: 14px 0 0 14px;
+}
+#skill > .container > .skill-tree > li > p {
+  font-size: 14px;
+  margin-left: -30px;
+  line-height: 20px;
+  color: #666;
+  border-bottom: 1px dashed #999;
+}

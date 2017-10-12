@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy's blog</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <!--<script src="lib/js/less.min.js"></script>-->
+</head>
+
+<body>
+    <ul id="tip">
+        <template v-for="(item,index) in tips">
+            <li :class="{on:iter_tip===index}"
+                    class="tip-list"
+                    @mouseenter="iter_tip=index"
+                    @mouseleave="iter_tip=null">
+                <a :class="item.href">
+                    <p>{{item.str}}</p>
+                    <img :src="item.src">
+                </a>
+            </li>
+        </template>
+    </ul>
+    <!--头部导航栏-->
+    <header id="header">
+        <div class="container">
+            <!--自定义一个logo-->
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <span class="logo-lg">J</span><span class="logo-sm">immy's </span>
+                        <span class="logo-lg">H</span><span class="logo-sm">omePage</span>
+                        <p>我不管 我就要跟妹子坐一起</p>
+                    </a>
+                </h1>
+            </div>
+            <!--包含各个页面的导航-->
+            <ul class="nav">
+                <template v-for="(item,index) in nav">
+                    <li :class="{on:0===index||iter_nav===index}"
+                        @mouseenter="iter_nav=index"
+                        @mouseleave="iter_nav=null">
+                        <a :href="item.href">{{item.name}}</a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </header>
+    <!--介绍-->
+    <div id="banner">
+        <ul class="banner-about">
+            <li class="head-img"></li>
+            <li>Name:<span>庞飞龙</span></li>
+            <li>Address:<span>深圳</span></li>
+            <li>Tel:<span>15989375997</span></li>
+            <li>Email:<span>407566546@qq.com</span></li>
+            <li>Interest:<span>读书，玩单机，发呆</span></li>
+            <li>Other:<span>什么时候才能自己造个轮子</span></li>
+        </ul>
+        <ul class="banner-weather">
+            <li>
+                <p>今天是：</p>
+                <span>{{date}}</span>
+            </li>
+            <li>
+                <p>所在地：</p>
+                <span>{{location}}</span>
+            </li>
+            <li>
+                <p>pm：</p>
+                <span>{{pm}}</span>
+            </li>
+            <li>
+                <p>Tips：</p>
+                <br>
+                <span>{{des}}</span>
+                <span>{{tipt}}</span>
+                <span>{{title}}</span>
+                <span>{{zs}}</span>
+            </li>
+            <li>
+                <p>Weather：</p>
+                <br>
+                <span>{{temp}}</span>
+                <br>
+                <span>{{weather}}</span>
+                <span>{{wind}}</span>
+            </li>
+        </ul>
+        <div class="container">
+            <div class="banner-info">
+                <ul class="banner-content">
+                    <li>
+                        <h1>Hello World</h1>
+                    </li>
+                    <!--<li><p>好多年不玩WoW 甚是怀念 把照片弄到上面每天观摩一下</p></li>-->
+                    <!--<li><a href="./more.html">Click for more</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--工作经历-->
+    <div id="work">
+        <div class="container">
+            <div class="title">
+                <!--大字体-->
+                <h2>工作经历</h2>
+                <!--小字体说明-->
+                <div class="title-sm">
+                    <p>目前正为了成为前端工程师而努力</p>
+                </div>
+            </div>
+            <!--4个标签导向-->
+            <div class="wel-content">
+                <ul>
+                    <template v-for="item in works">
+                        <li>
+                            <div class="wel-list">
+                                <div class="icon">
+                                    <img :src="item.src">
+                                </div>
+                                <h4>{{item.title}}</h4>
+                                <p>{{item.content}}</p>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--技能掌握-->
+    <div id="skill">
+        <div class="container">
+            <div class="title">
+                <h2>技能树</h2>
+                <div class="title-sm">
+                    <p>前端技能树长又长</p>
+                </div>
+            </div>
+            <ul class="skill-tree">
+                <template v-for="item in trees">
+                    <li>
+                        <span class=" name ">{{item.name}}:</span>
+                        <span class="progress ">
+                            <span class="percentage "
+                                :style="{width:item.percentage,background:item.color}">
+                                {{item.percentage}}
+                            </span>
+                        </span>
+                        <p>{{item.tips}}</p>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+    <!--底部-->
+    <footer class="clearfix " id="footer">
+        <div class="f-top ">
+            <div class="container ">
+                <template v-for="items in foot">
+                    <ul>
+                        <li><h4>{{items.title}}</h4></li>
+                        <template v-for="item in items.contents">
+                            <li>
+                                <a :href="item.href">{{item.content}}</a>
+                            </li>
+                        </template>
+                </ul>
+                </template>
+            </div>
+        </div>
+        <div class="f-bottom ">
+            <div class="container ">
+                <p class="ft-word ">© 2017 Jimmy. All rights reserved | Design by me~ </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="lib/js/vue.min.js "></script>
+<script src="lib/js/jquery.min.js"></script>
+<script src="lib/js/vue-resource.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js "></script>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy's blog</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/more.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <!--<script src="lib/js/less.min.js"></script>-->
+</head>
+
+<body>
+    <ul id="tip">
+        <template v-for="(item,index) in tips">
+            <li :class="{on:iter_tip===index}"
+                    class="tip-list"
+                    @mouseenter="iter_tip=index"
+                    @mouseleave="iter_tip=null">
+                <a :class="item.href">
+                    <p>{{item.str}}</p>
+                    <img :src="item.src">
+                </a>
+            </li>
+        </template>
+    </ul>
+    <!--头部导航栏-->
+    <header id="header">
+        <div class="container">
+            <!--自定义一个logo-->
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <span class="logo-lg">J</span><span class="logo-sm">immy's </span>
+                        <span class="logo-lg">H</span><span class="logo-sm">omePage</span>
+                        <p>我不管 我就要跟妹子坐一起</p>
+                    </a>
+                </h1>
+            </div>
+            <!--包含各个页面的导航-->
+            <ul class="nav">
+                <template v-for="(item,index) in nav">
+                    <li :class="{on:3===index||iter_nav===index}"
+                        @mouseenter="iter_nav=index"
+                        @mouseleave="iter_nav=null">
+                        <a :href="item.href">{{item.name}}</a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </header>
+
+
+    <!--------------------------------------------------以上为头部------------------------------------------------>
+
+    <!--轮播图-->
+    <div id="plugin">
+        <div class="title container ">
+            <h2>原创插件</h2>
+            <div class="title-sm ">
+                <template v-for="item in guide">
+                    <p>{{item.p}}<pre>{{item.pre}}</pre></p>
+                </template>
+                <p>查看源代码请点击<a href="https://github.com/pflhm2005/wheel/blob/master/jimmy.js">这里</a></p>
+            </div>
+        </div>
+        <!--轮播图展示区域-->
+        <div id="slide">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div>
+                <img :src="item.src" v-for="item in slides">
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------------------以上为底部------------------------------------------------>
+
+
+    <footer class="clearfix " id="footer">
+        <div class="f-top ">
+            <div class="container ">
+                <template v-for="items in foot">
+                    <ul>
+                        <li><h4>{{items.title}}</h4></li>
+                        <template v-for="item in items.contents">
+                            <li>
+                                <a :href="item.href">{{item.content}}</a>
+                            </li>
+                        </template>
+                </ul>
+                </template>
+            </div>
+        </div>
+        <div class="f-bottom ">
+            <div class="container ">
+                <p class="ft-word ">© 2017 Jimmy. All rights reserved | Design by me~ </p>
+                <p class="ft-icon "></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="lib/js/jquery.min.js "></script>
+<script src="lib/js/vue.min.js "></script>
+<script src="js/common.js"></script>
+<script src="js/more.js"></script>
+<script src="js/jimmy.js "></script>
+<script>
+    _("#slide").slide({
+        width: '932px',
+        height: '699px',
+    });
+</script>
+
+</html>

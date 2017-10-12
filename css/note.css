@@ -1,0 +1,410 @@
+html,
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+img,
+input,
+span {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+img,
+input {
+    border: 0
+}
+
+body {
+    width: 100%;
+    color: #000;
+    font-size: 12px;
+    font-family: 'Playfair Display';
+    background: #eee;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.red {
+    color: red;
+}
+
+.fb {
+    font-weight: 700;
+}
+
+@media (min-width:1170px) {
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+    }
+}
+
+#tip {
+    position: fixed;
+    right: 1%;
+    bottom: 5%;
+    background-color: #999;
+    text-align: center;
+    z-index: 10;
+}
+
+#tip>.tip-list {
+    border: 1px solid #eee;
+    width: 55px;
+    height: 55px;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#tip>.tip-list.on {
+    background-color: black;
+}
+
+#tip>.tip-list>a {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    background-color: #1b1c1d;
+    height: 100px;
+}
+
+header>.container {
+    height: 100%;
+    width: 100%;
+}
+
+header>.container>.logo {
+    float: left;
+}
+
+header>.container>.logo>h1 {
+    line-height: 40px;
+    font-size: 36px;
+    padding-left: 50px;
+}
+
+header>.container>.logo>h1>a {
+    margin-top: 15px;
+    display: block;
+    height: 100%;
+    font-weight: bold;
+}
+
+header>.container>.logo>h1>a>.logo-lg {
+    color: #ff9900;
+}
+
+header>.container>.logo>h1>a>p {
+    font-size: 15px;
+    text-indent: 5px;
+    color: #999;
+}
+
+header>.container>.nav {
+    line-height: 100px;
+    height: 100%;
+    float: right;
+}
+
+header>.container>.nav>li {
+    height: 1%;
+    transition: all .3s;
+    float: left;
+}
+
+header>.container>.nav>li>a {
+    font-size: 15px;
+    height: 100%;
+    position: relative;
+    padding: 40px 30px;
+}
+
+header>.container>.nav>li.on {
+    height: 100%;
+    background-color: #ff9900;
+}
+
+footer>.f-top {
+    background-color: #333;
+    height: 360px;
+    padding-left: 50px;
+}
+
+footer>.f-top>.container {
+    padding: 64px 0;
+}
+
+footer>.f-top>.container>ul {
+    width: 25%;
+    float: left;
+}
+
+footer>.f-top>.container>ul>li {
+    text-align: left;
+}
+
+footer>.f-top>.container>ul>li>h4 {
+    font-weight: normal;
+    font-size: 32px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+footer>.f-top>.container>ul>li>a {
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 0;
+    text-indent: 10px;
+}
+
+footer>.f-top>.container>ul>li>a:hover {
+    text-decoration: underline;
+}
+
+footer>.f-bottom {
+    background-color: #1b1a1a;
+    height: 39px;
+    padding: 24px 0 24px 50px;
+    line-height: 39px;
+    color: white;
+    font-size: 16px;
+}#contents {
+  position: relative;
+  width: 100%;
+}
+#contents > .content {
+  height: 100%;
+}
+#contents > .content > #aside {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  float: left;
+  padding: 20px 60px;
+  box-sizing: border-box;
+}
+#contents > .content > #aside > ul {
+  padding: 10px 0;
+}
+#contents > .content > #aside > ul > .aside-title {
+  font-size: 20px;
+  display: inline;
+  cursor: pointer;
+}
+#contents > .content > #aside > ul > .aside-title > a {
+  color: #999;
+}
+#contents > .content > #aside > ul > .aside-list {
+  margin-top: 5px;
+  font-family: Console, Verdana, "\5FAE\8F6F\96C5\9ED1";
+  display: none;
+}
+#contents > .content > #aside > ul > .aside-list > a {
+  font-size: 14px;
+  padding: 3px 5px;
+  border-bottom: 1px dashed #000;
+  display: inline-block;
+  width: 100%;
+  color: black;
+}
+#contents > .content > #content {
+  min-height: 500px;
+  box-sizing: border-box;
+  border-left: 1px dashed #999;
+  position: relative;
+  width: 80%;
+  height: 100%;
+  float: left;
+  text-align: left;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+#contents > .content > #content > h1 {
+  text-align: center;
+  opacity: .5;
+}
+#contents > .content > #content > h1 > a {
+  color: #ff9900;
+}
+#contents > .content > #content > div {
+  width: 80%;
+  padding-left: 200px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: Courier New, Console, Verdana, "\5FAE\8F6F\96C5\9ED1";
+}
+#contents > .content > #content > div > #template {
+  position: relative;
+  margin-top: 50px;
+}
+#contents > .content > #content > div > #template > ul > li > a {
+  display: block;
+  padding: 10px 0;
+  opacity: .5;
+  color: black;
+}
+#contents > .content > #content > div > #template > ul > li > a:hover {
+  opacity: 1;
+}
+#contents > .content > #content > div > #template > .path {
+  left: -100px;
+  top: -80px;
+  position: absolute;
+  font-size: 0;
+  font-weight: bold;
+}
+#contents > .content > #content > div > #template > .path > a {
+  font-family: 'Monaco';
+  font-size: 16px;
+  color: black;
+}
+#contents > .content > #content > div > #template > .path > a:hover {
+  text-decoration: underline;
+}
+#contents > .content > #content > div > #template > .path > span {
+  font-size: 14px;
+  padding: 0 5px;
+}
+#contents > .content > #content > div > #template > .box {
+  font-family: Consolas ;
+  margin-right: 200px;
+  position: relative;
+}
+#contents > .content > #content > div > #template > .box > h2 {
+  padding: 50px 0;
+  font-size: 24px;
+}
+#contents > .content > #content > div > #template > .box > .num_list {
+  font-family: 'Anonymous';
+}
+#contents > .content > #content > div > #template > .box > .num_list > li {
+  padding: 10px 0;
+  font-size: 16px;
+}
+#contents > .content > #content > div > #template > .box > .num_list > li > p {
+  margin: 10px 0;
+}
+#contents > .content > #content > div > #template > .box > .num_list > li > span {
+  display: block;
+  text-indent: 24px;
+}
+#contents > .content > #content > div > #template > .box > pre {
+  border-left: 5px solid #999;
+  padding: 20px 0;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: bold;
+  font-family: "Console";
+}
+#contents > .content > #content > div > #template > .box > pre > span {
+  opacity: .5;
+}
+#contents > .content > #content > div > #template > .box > .title {
+  padding: 20px 0 ;
+  text-indent: 20px;
+}
+#contents > .content > #content > div > #template > .box > .title::before {
+  content: "-";
+  padding: 0 10px;
+}
+#contents > .content > #content > div > #template > .box > .quote {
+  margin: 10px 0 10px 30px;
+  padding: 5px 20px;
+  border-left: 3px solid #999;
+}
+#contents > .content > #content > div > #template > .box > .quote > span {
+  padding: 10px 0;
+  font-size: 16px;
+  display: block;
+}
+#contents > .content > #content > div > #template > .box > .quote > .tag > span {
+  display: block;
+  font-size: 14px;
+}
+#contents > .content > #content > div > #template > .box > .quote > .tag > .t-in1 {
+  text-indent: 2em;
+}
+#contents > .content > #content > div > #template > .box > .Sizzle {
+  position: fixed;
+  right: 50px;
+  top: 150px;
+  z-index: 10;
+  background-color: #999;
+}
+#contents > .content > #content > div > #template > .box > .Sizzle > li {
+  text-align: left;
+}
+#contents > .content > #content > div > #template > .box > .Sizzle > li > a {
+  border: 1px solid white;
+  width: 100%;
+  display: inline-block;
+  padding: 10px 5px;
+  font-size: 20px;
+  opacity: .6;
+  color: black;
+}
+#contents > .content > #content > div > #template > .box > .Sizzle > li > a:hover {
+  background-color: #ff9900;
+  opacity: 1;
+}
+#contents > .content > #content > div > h1 {
+  padding: 20px 200px 20px 0;
+  font-size: 36px;
+  text-align: center;
+}
+#contents > .content > #content > div > h5 {
+  font-size: 0;
+  position: absolute;
+}

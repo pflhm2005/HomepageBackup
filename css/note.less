@@ -1,0 +1,193 @@
+#contents{
+    position: relative;
+    // height: 100%;
+    width: 100%;
+    >.content{
+        height: 100%;
+        >#aside{
+            position: relative;
+            height: 100%;
+            width: 20%;
+            float: left;
+            padding:20px 60px;
+            box-sizing: border-box;
+            >ul{
+                // font-family: Courier New,Console,Verdana,"微软雅黑";
+                padding:10px 0;
+                >.aside-title{
+                    font-size: 20px;
+                    display: inline;
+                    cursor: pointer;
+                    >a{
+                        color:#999;
+                    }
+                }
+                >.aside-list{
+                    margin-top:5px;
+                    font-family: Console,Verdana,"微软雅黑";
+                    display: none;
+                    >a{
+                        font-size: 14px;
+                        padding:3px 5px;
+                        border-bottom:1px dashed #000;
+                        display: inline-block;
+                        width: 100%;
+                        color:black;
+                    }
+                }
+            }
+        }
+        >#content{
+            min-height: 500px;
+            box-sizing: border-box;
+            border-left:1px dashed #999;
+            position: relative;
+            width: 80%;
+            height: 100%;
+            float: left;
+            text-align: left;
+            padding-top: 50px;
+            padding-bottom:100px;
+            >div{
+                width: 80%;
+                padding-left:200px;
+                font-size: 20px;
+                line-height: 30px;
+                font-family: Courier New,Console,Verdana,"微软雅黑";
+                >h1{
+                    padding: 20px 200px 20px 0;
+                    font-size: 36px;
+                    text-align: center;
+                }
+                >h5{
+                    font-size: 0;
+                    position: absolute;
+                }
+                >div{
+                    position: relative;
+                    margin-top: 50px;
+                    >ul{
+                        >li{
+                            >a{
+                                display: block;
+                                padding:10px 0;
+                                opacity: .5;
+                                color:black;
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    >.path{
+                        left: -100px;
+                        top:-80px;
+                        position: absolute;
+                        font-size: 0;
+                        font-weight: bold;
+                        >a{
+                            font-family:'Monaco';
+                            font-size: 16px;
+                            color:black;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                        >span{
+                            font-size: 14px;
+                            padding:0 5px;
+                        }
+                    }
+                    >.box{
+                        font-family: Consolas ;
+                        margin-right: 200px;
+                        position: relative;
+                        >h2{
+                            padding: 50px 0;
+                            font-size: 24px;
+                        }
+                        >.num_list{
+                            font-family: 'Anonymous';
+                            >li{
+                                padding:10px 0;
+                                font-size: 16px;
+                                >p{
+                                    margin:10px 0;
+                                }
+                                >span{
+                                    display: block;
+                                    text-indent: 24px;
+                                }
+                            }
+                        }
+                        >pre{
+                            border-left: 5px solid #999;
+                            padding:20px 0;
+                            font-size: 15px;
+                            line-height: 25px;
+                            font-weight: bold;
+                            font-family: "Console";
+                            >span{
+                                opacity: .5;
+                            }
+                        }
+                        >.title{
+                            padding:20px 0 ;
+                            text-indent: 20px;
+                        }
+                        >.title::before{
+                            content:"-";
+                            padding: 0 10px;
+                        }
+                        >.quote{
+                            margin:10px 0 10px 30px;
+                            padding: 5px 20px;
+                            border-left: 3px solid #999;
+                            >span{
+                                padding:10px 0;
+                                font-size: 16px;
+                                display: block;
+                            }
+                            >.tag{
+                                >span{
+                                    display: block;
+                                    font-size: 14px;
+                                }
+                                >.t-in1{
+                                    text-indent: 2em;
+                                }
+                            }
+                        }
+                        >.Sizzle{
+                            position: fixed;
+                            right: 50px;
+                            top: 150px;
+                            z-index: 10;
+                            background-color: #999;
+                            >li{
+                                text-align: left;
+                                >a{
+                                    border:1px solid white;
+                                    width: 100%;
+                                    display: inline-block;
+                                    padding:10px 5px;
+                                    font-size: 20px;
+                                    opacity: .6;
+                                    color:black;
+                                    &:hover{
+                                        background-color: #ff9900;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }  
+            }
+            >h1{
+                opacity: .5;
+                text-align: center;
+            }
+        }
+    }  
+}

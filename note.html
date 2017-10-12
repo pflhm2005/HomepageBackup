@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jimmy's blog</title>
+</head>
+<link rel="stylesheet" href="./css/note.css">
+
+<body>
+    <ul id="tip">
+        <template v-for="(item,index) in tips">
+            <li :class="{on:iter_tip===index}"
+                    class="tip-list"
+                    @mouseenter="iter_tip=index"
+                    @mouseleave="iter_tip=null">
+                <a :class="item.href">
+                    <p>{{item.str}}</p>
+                    <img :src="item.src">
+                </a>
+            </li>
+        </template>
+    </ul>
+    <!--头部导航栏-->
+    <header id="header">
+        <div class="container">
+            <!--自定义一个logo-->
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <span class="logo-lg">J</span><span class="logo-sm">immy's </span>
+                        <span class="logo-lg">H</span><span class="logo-sm">omePage</span>
+                        <p>我不管 我就要跟妹子坐一起</p>
+                    </a>
+                </h1>
+            </div>
+            <!--包含各个页面的导航-->
+            <ul class="nav">
+                <template v-for="(item,index) in nav">
+                    <li :class="{on:1===index||iter_nav===index}"
+                        @mouseenter="iter_nav=index"
+                        @mouseleave="iter_nav=null">
+                        <a :href="item.href">{{item.name}}</a>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </header>
+
+
+    <!--------------------------------------------------以上为头部------------------------------------------------>
+
+
+    <div id="contents" class="clearfix">
+        <div class="content">
+            <!--左边的导航-->
+            <div id="aside">
+                <template v-for="(items,index) in asides">
+                    <ul>
+                        <li class="aside-title"
+                            @click="iter=index">
+                            <router-link :to="items.href">{{items.title}}</router-link>
+                            <!--{{items.title}}-->
+                        </li>
+                        <li class="aside-list" :class="{on:iter === index}">
+                            <router-link :to="item.href"  v-for="item in items.list">{{item.list}}</router-link>
+                        </li>
+                </ul>
+                </template>
+            </div>
+            <!--右边内容-->
+            <div id="content">
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
+
+
+    <!--------------------------------------------------以下为底部------------------------------------------------>
+
+
+    <footer id="footer">
+        <div class="f-top ">
+            <div class="container ">
+                <template v-for="items in foot">
+                    <ul>
+                        <li><h4>{{items.title}}</h4></li>
+                        <template v-for="item in items.contents">
+                            <li>
+                                <a :href="item.href">{{item.content}}</a>
+                            </li>
+                        </template>
+                </ul>
+                </template>
+            </div>
+        </div>
+        <div class="f-bottom ">
+            <div class="container ">
+                <p class="ft-word ">© 2017 Jimmy. All rights reserved | Design by me~ </p>
+                <p class="ft-icon "></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src='./js/note.js'></script>
+
+</html>
